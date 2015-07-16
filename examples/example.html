@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<!-- Importing Select2 CSS -->
+		<link rel="stylesheet" type="text/css" href="../bower_components/select2/dist/css/select2.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div style="display: block;">
+				<p style="display: inline-block; margin-right: 10px;">Choose a pokemon: </p>
+				<select v-select2="options: names, value: name" style="width: 200px; display: inline-block;"></select>
+			</div>
+			<div style="display: block;">
+				<h4>I CHOOSE YOU, {{name}}</h4>
+			</div>
+		</div>
+
+		<!-- Importing JQuery -->
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+
+		<!-- Importing Select2 JS -->
+		<script type="text/javascript" src="../bower_components/select2/dist/js/select2.js"></script>
+
+		<!-- Importing Vue -->
+		<script type="text/javascript" src="../bower_components/vue/dist/vue.js"></script>
+
+		<!-- Importing vue-select2 plugin -->
+		<script type="text/javascript" src="../dist/vue-select2.js"></script>
+
+		<script type="text/javascript">
+			Vue.use( vueSelect2 );
+
+			new Vue({
+				el: ".container",
+				data: { names: ["Charmander", "Squirtle", "Bulbasaur", "Pikachu"], name: "..." }
+			});
+		</script>
+	</body>
+</html>
