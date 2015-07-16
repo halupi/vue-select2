@@ -1,5 +1,5 @@
 # vue-select2
-
+> Based on knockout-select2 plugin.
 ## Requirements
 - JQuery **1.9.0** or later
 - Select2 **4.0.0** or later
@@ -16,13 +16,12 @@ The first step is import and/or  use the plugin, you can import it via CommonJS 
 
 #### Global variable
 If you don't have CommonJS then a variable called "vueSelect2" will be available on window scope.
+
 ```js
 	Vue.use( vueSelect2 );
 ```
 
 The next step is tell the plugin which Model's attributes you are going to use (via *HTML*)
-
-### HTML
 
 ```html
 	<select v-select2="options: data, value: selected"></select>
