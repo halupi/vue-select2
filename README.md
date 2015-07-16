@@ -12,7 +12,7 @@ The first step is import and/or  use the plugin, you can import it via CommonJS 
 
 #### CommonJS
 ```js
-	var select2 = require("vue-select2);
+	var select2 = require("vue-select2");
 	Vue.use( vueSelect2 );
 ```
 
