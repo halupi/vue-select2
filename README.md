@@ -1,5 +1,7 @@
 # vue-select2
+
 > Based on knockout-select2 plugin.
+
 ## Requirements
 - JQuery **1.9.0** or later
 - Select2 **4.0.0** or later
