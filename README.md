@@ -8,7 +8,7 @@
 - Vue **0.12.0** or later
 
 ## Usage
-The first step is import and/or  use the plugin, you can import it via CommonJS or just use it directly.
+The first step to import and/or use the plugin, is to either import it via CommonJS or just use it directly.
 
 #### CommonJS
 ```js
@@ -17,13 +17,13 @@ The first step is import and/or  use the plugin, you can import it via CommonJS 
 ```
 
 #### Global variable
-If you don't have CommonJS then a variable called "vueSelect2" will be available on window scope.
+If you are not using CommonJS, then a variable called "vueSelect2" will be available on window scope.
 
 ```js
 	Vue.use( vueSelect2 );
 ```
 
-The next step is tell the plugin which Model's attributes you are going to use (via *HTML*)
+The next step is to indicate which Model's attributes you are going to use (via *HTML*)
 
 ```html
 	<select v-select2="options: data, value: selected"></select>
