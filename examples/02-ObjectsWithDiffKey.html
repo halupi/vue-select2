@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../bower_components/select2/dist/css/select2.min.css">
+	</head>
+	<body>
+		<div id="container">
+			<select v-select2="{ data: pokemons, value: 'choosen' }" multiple></select>
+			<h3>Welcome to {{ choosen.text }}</h3>
+		</div>
+
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="../bower_components/select2/dist/js/select2.min.js"></script>
+		<script type="text/javascript" src="../bower_components/vue/dist/vue.min.js"></script>
+		<script type="text/javascript" src="../dist/vue-select2.js"></script>
+		<script type="text/javascript">
+			Vue.use( vueSelect2, { placeholder: "Selecciona" } ); // same as window.vueSelect2
+
+			new Vue({
+				data: {
+					pokemons: [
+						{ _id: 1, name: "Charmander", type: "Fire" },
+						{ _id: 2, name: "Squirtle", type: "Water" },
+						{ _id: 3, name: "Bulbassaur", type: "Leaf" }
+					],
+					choosen: null,
+					options: {
+						placeholder: "Choose a pokemon",
+						allowClear: true,
+						templateSelection: function(pokemon) {
+							return { id: pokemon._id, text: pokemon.name };
+						}
+					}
+				}
+			}).$mount("#container");
+		</script>
+	</body>
+</html>

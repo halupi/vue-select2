@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../bower_components/select2/dist/css/select2.min.css">
+	</head>
+	<body>
+		<div id="container">
+			<select v-select2="{data: countries, value: 'selectedCountry', options: select2Options}" style="width: 300px">
+				<!-- Empty option needed for placeholder (see select2 docs) -->
+				<option></option>
+			</select>
+			<h3>Welcome to {{ selectedCountry.text }}</h3>
+		</div>
+
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="../bower_components/select2/dist/js/select2.min.js"></script>
+		<script type="text/javascript" src="../bower_components/vue/dist/vue.min.js"></script>
+		<script type="text/javascript" src="../dist/vue-select2.js"></script>
+		<script type="text/javascript">
+			Vue.use( vueSelect2 ); // same as window.vueSelect2
+
+			new Vue({
+				data: {
+					countries: [
+						{ id: 1, text: "México" }, 
+						{ id: 2, text: "USA" },
+						{ id: 3, text: "Canada" }, 
+						{ id: 4, text: "Chile" },
+						{ id: 5, text: "Argentina" }
+					],
+					selectedCountry: null,
+					select2Options: {
+						placeholder: "Select a country...",
+						allowClear: true
+					}
+				}
+			}).$mount("#container");
+		</script>
+	</body>
+</html>
